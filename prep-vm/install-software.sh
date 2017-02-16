@@ -22,7 +22,7 @@ function install_mvn {
     echo "Installing Maven"
     wget -O /tmp/maven.tar.gz http://apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz
     mkdir /opt/maven
-    tar -xzvf /tmp/maven.tar.gz -C /opt/maven
+    tar -xzvf /tmp/maven.tar.gz --strip 1 -C /opt/maven
     echo "export PATH=$PATH:/opt/maven/bin" >> ~/.bash_profile
     source ~/.bash_profile
 }
