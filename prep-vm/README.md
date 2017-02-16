@@ -18,7 +18,7 @@ _Note:_ Be aware that this will be rather large VM (around 12GB) so be ready wit
 1. execute the following command
 
     ```bash
-    cd /root && git clone && cd bdhs && ./prep-vm/install-software.sh
+    cd /root && git clone https://github.com/eyalbenivri/bdhs.git && cd bdhs && ./prep-vm/install-software.sh
     ```
 
     this command will run for a few (good) minutes. It will install everything needed for the class, including:
@@ -27,6 +27,7 @@ _Note:_ Be aware that this will be rather large VM (around 12GB) so be ready wit
     - Maven
     - IntelliJ
     - Scala
+    
 1. Together with all the other assets in the repository (labs, solutions and data), you should have a ready enviorment.
 1. To re-package the VM for distribution turn off the machine, go to the VirtaulBox, go to 'File' and 'Export Appliance' and follow the on-screen instructions
     
