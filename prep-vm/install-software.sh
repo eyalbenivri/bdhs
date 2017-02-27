@@ -40,7 +40,7 @@ function install_scala {
 }
 
 function install_gui {
-    yum -y groupinstall "Desktop" "Desktop Platform" "X Window System" "Fonts" 
+    yum -y groupinstall "GNOME Desktop"
 }
 
 install_gui
