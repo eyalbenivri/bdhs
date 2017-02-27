@@ -48,4 +48,5 @@ install_mvn
 install_scala 2.11.8
 install_intellij 2016.3.4
 install_pycharm 2016.3.2
-shutdown -r 0
+install_gui
+reboot
