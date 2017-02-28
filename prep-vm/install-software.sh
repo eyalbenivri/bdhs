@@ -1,6 +1,8 @@
 #!/bin/bash
 
 function prep {
+    echo "export HADOOP_USER_NAME=hdfs" >> ~/.bash_profile
+    echo "export SPARK_MAJOR_VERSION=2" >> ~/.bash_profile
     yum update -y
     rm -Rf /boot/*.img
 }
@@ -44,6 +46,13 @@ function install_scala {
     source ~/.bash_profile
 }
 
+function cache_mvn_packages {
+    echo "Caching MVN Packages"
+    cd ./code/BDHScode
+    mvn clean install
+    cd ../../
+}
+
 function install_gui {
     yum groupinstall -y "GNOME Desktop"
     sed -i 's/id:3:initdefault/id:5:initdefault/g' /etc/inittab
@@ -56,5 +65,6 @@ install_mvn
 install_scala 2.11.8
 install_intellij 2016.3.4
 install_pycharm 2016.3.2
+cache_mvn_packages
 install_gui
 reboot

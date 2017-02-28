@@ -1,0 +1,11 @@
+To complete this lab, you can run Hive Queries in the hive CLI (faster, but not very convenient) or the Hive-Ambari-View (slower, but more user friendly)
+To open the hive CLI:
+    1. open a terminal window
+    2. activate the hive shell by running the `hive` command
+To open the Hive-Ambari-View:
+    1. open the ambari web page
+    2. login as user `maria_dev` and password `maria_dev`
+    3. on the top right corner click the views icon (9 dots in a square) and select the `Hive View` from the drop down
+
+-- To create our tables
+CREATE TABLE

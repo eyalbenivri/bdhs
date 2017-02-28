@@ -1,0 +1,8 @@
+1. open a new terminal windows
+2. show the content of the HDFS root folder, by using the command `hdfs dfs -ls /`
+3. compare the results with the local file system by running `ls -lsah /`
+4. create a new hdfs folder named 'bdhs' under the root directory
+5. run the command `unzip data.zip`
+6. open the ambari web page, and view general stats about hdfs. make specific note about blocks data and disk usage data
+7. using the terminal, use the command `hdfs dfs -copyFromLocal data /bdhs/`
+8. refresh the ambari web page, and see what has changed.

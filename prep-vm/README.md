@@ -12,24 +12,33 @@ _Note:_ Be aware that this will be rather large VM (around 12GB) so be ready wit
 1. Load the Hortonworks VM image into VirtualBox.
     - In VirtualBox, go to 'File', and then 'Import Appliance'
     - Point the file explorer to the downloaded VM from hortonworks
+    - In the configuration pane, add a Optical Disk (CD-ROM) to the machine. This will be important later.
     - Configure the new machine, and complete the import process
 1. Boot up the VM and wait for startup to complete
-1. Login into the machine as root and password 'hadoop'. If you want to use SSH use the 2122 port, as this is the host port, and 2222 is for the Docker instance running inside the machine.
-1. execute the following command
+1. Login into the machine as root and password 'hadoop'. 
+    - `Note: If you want to use SSH use the 2122 port, as this is the host port, and 2222 is for the Docker instance running inside the machine.`
+1. Execute the following command
 
     ```bash
     yum install -y git
-    cd /root && git clone https://github.com/eyalbenivri/bdhs.git && cd bdhs && ./prep-vm/install-software.sh
+    cd /root
+    git clone https://github.com/eyalbenivri/bdhs.git
+    cd bdhs && bash ./prep-vm/install-software.sh
     ```
 
-    this command will run for a few (good) minutes. It will install everything needed for the class, including:
+    This command will run for a few (good) minutes and __restart__ the machine. It will install everything needed for the class, including:
     
     - GUI (GNOME)
     - Maven
     - IntelliJ
     - PyCharm
     - Scala
+    - Starter Labs and Demo Code
+    - Datasets
     
-1. Together with all the other assets in the repository (labs, solutions and data), you should have a ready enviorment.
+
+1. Together with all the other assets in the repository (labs, solutions and data), you should have a near-ready enviorment.
+1. After the machine finishes restart, complete the GNOME setup, using the GUI and login to the machine using root (You might need to click on `Not listed?` link below the user list)
+
 1. To re-package the VM for distribution turn off the machine, go to the VirtaulBox, go to 'File' and 'Export Appliance' and follow the on-screen instructions
     
