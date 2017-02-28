@@ -40,10 +40,12 @@ function install_scala {
 }
 
 function install_gui {
-    yum -y groupinstall "GNOME Desktop"
+    yum groupinstall -y "GNOME Desktop"
+    sed -i 's/id:3:initdefault/id:5:initdefault/g' /etc/inittab
+    yum update -y kernel*
+    systemctl set-default graphical.target
 }
 
-install_gui
 install_mvn
 install_scala 2.11.8
 install_intellij 2016.3.4
