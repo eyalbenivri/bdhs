@@ -14,10 +14,11 @@ _Note:_ Be aware that this will be rather large VM (around 12GB) so be ready wit
     - Point the file explorer to the downloaded VM from hortonworks
     - Configure the new machine, and complete the import process
 1. Boot up the VM and wait for startup to complete
-1. SSH into the machine as root, change the password to something memrable (remember, your students will use these credentials during the course, so make it easy enough)
+1. Login into the machine as root and password 'hadoop'. If you want to use SSH use the 2122 port, as this is the host port, and 2222 is for the Docker instance running inside the machine.
 1. execute the following command
 
     ```bash
+    yum install -y git
     cd /root && git clone https://github.com/eyalbenivri/bdhs.git && cd bdhs && ./prep-vm/install-software.sh
     ```
 
@@ -26,6 +27,7 @@ _Note:_ Be aware that this will be rather large VM (around 12GB) so be ready wit
     - GUI (GNOME)
     - Maven
     - IntelliJ
+    - PyCharm
     - Scala
     
 1. Together with all the other assets in the repository (labs, solutions and data), you should have a ready enviorment.

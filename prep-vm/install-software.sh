@@ -1,5 +1,10 @@
 #!/bin/bash
 
+function prep {
+    yum update -y
+    rm -Rf /boot/*.img
+}
+
 function install_intellij {
     echo "Installing IntelliJ"
     filename="https://download.jetbrains.com/idea/ideaIC-$1.tar.gz"
@@ -46,6 +51,7 @@ function install_gui {
     systemctl set-default graphical.target
 }
 
+prep
 install_mvn
 install_scala 2.11.8
 install_intellij 2016.3.4
